@@ -17,7 +17,7 @@ func TestState(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		s := State{test.startState, test.startState}
+		s := State{test.startState, test.startState, false}
 		if res := s.TransitionTo(test.startState); res != s.current {
 			t.Error("error")
 		}
